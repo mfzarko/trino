@@ -185,7 +185,8 @@ public class GlueHiveMetastore
         this.defaultDir = glueConfig.getDefaultWarehouseDir();
         this.catalogId = glueConfig.getCatalogId().orElse(null);
         this.partitionSegments = glueConfig.getPartitionSegments();
-        this.partitionsReadExecutor = requireNonNull(partitionsReadExecutor, "partitionsReadExecutor is null");
+        this.executor = requireNonNull(executor, "executor is null");
+        this.columnStatisticsProvider = requireNonNull(columnStatisticsProvider, "columnStatisticsProvider is null");
         this.assumeCanonicalPartitionKeys = glueConfig.isAssumeCanonicalPartitionKeys();
         this.tableFilter = requireNonNull(tableFilter, "tableFilter is null");
     }

@@ -283,6 +283,9 @@ Database resource group manager
 
 This example is for a MySQL database.
 
+Make sure the environment (`'test'` in the example below) matches ``node.environment`` property from
+:ref:`node_properties` as stated previously.
+
 .. code-block:: sql
 
     -- global properties
